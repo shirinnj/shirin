@@ -1,6 +1,5 @@
 import winsound, time, os, platform
 
-
 def sound():
   for i in range(2): # Number of repeats
 		for j in range(9): # Number of beeps
@@ -51,5 +50,5 @@ def main():
 	input_destinations(main_input)
 	return;
   
-if __name__ = "__main__":
+if __name__ == "__main__":
   main()
