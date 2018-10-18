@@ -28,7 +28,7 @@ def input_destinations(user_input):
 		wait_time = user_input
 		alarm(wait_time)
 	
-  elif user_input == '4':
+  	elif user_input == '4':
 		hours = int(input("Hours: "))
 		minutes = int(input("Minutes: "))
 		seconds = int(input("Seconds: "))
