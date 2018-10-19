@@ -12,6 +12,18 @@ def alarm(n):
 	time.sleep(n) # Waits 'n' seconds before playing sound
 	sound()
 
+def user_input():
+    print("What unit of time do you want to wait?\n (1) Hours\n (2) Minutes\n (3) Seconds\n (4) Combination")
+    
+    while True:  
+        try:
+            main_input = int(input(" What is your choice? please select an integer 1 , 2, 3 or 4 ?"))  
+        except :
+            print('Sorry, the input must be an integer!')
+        else:
+            break
+    return main_input
+
 def input_destinations(user_input):
 	if user_input == 1:
 		user_input = int(input("Enter the desired hours: "))
@@ -44,10 +56,9 @@ def input_destinations(user_input):
 			os.system('clear') # If OS is Linux or Mac
 			main()
 def main():
-	print("What unit of time do you want to wait?\n (1) Hours\n (2) Minutes\n (3) Seconds\n (4) Combination")
-	main_input = int(input(" enter an integer"))
-	input_destinations(main_input)
-	return;
+    picked=user_input()
+    input_destinations(picked)
+    return
   
 if __name__ == "__main__":
     main()
